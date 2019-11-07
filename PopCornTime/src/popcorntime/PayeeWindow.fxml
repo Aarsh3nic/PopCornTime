@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="556.0" prefWidth="1184.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="popcorntime.PayeeWindowController">
+   <children>
+      <AnchorPane prefHeight="865.0" prefWidth="1184.0">
+         <children>
+            <VBox layoutX="41.0" layoutY="232.0" prefHeight="576.0" prefWidth="836.0" spacing="25.0">
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="49.0" prefWidth="1037.0" spacing="50.0">
+                     <children>
+                        <Label text="Name:                 ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtname" alignment="TOP_LEFT" promptText="Enter your name..." />
+                        <Label fx:id="alertname" alignment="CENTER_RIGHT" textAlignment="RIGHT" textFill="#f50808" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="551.0" spacing="50.0">
+                     <children>
+                        <Label text="Age:                    ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtage" promptText="Enter your age..." />
+                        <Label fx:id="alertage" textFill="#f50808" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="551.0" spacing="50.0">
+                     <children>
+                        <Label text="Mobile Number:">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtmob" promptText="Enter your mobile number..." />
+                        <Label fx:id="alertmob" textFill="#f50808" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="551.0" spacing="50.0">
+                     <children>
+                        <Label text="Email Id:             ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtemail" promptText="Enter your email ID..." />
+                        <Label fx:id="alertemail" textFill="#f50808" />
+                     </children>
+                  </HBox>
+                  <HBox minHeight="-Infinity" prefHeight="49.0" prefWidth="200.0" spacing="50.0">
+                     <children>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Pay Through:">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="credit" mnemonicParsing="false" text="Credit/Debit Card">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="payment" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="scene" mnemonicParsing="false" text="Scene Card" toggleGroup="$payment">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </RadioButton>
+                        <Label fx:id="alertpayment" textFill="#f50808" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="551.0" spacing="50.0">
+                     <children>
+                        <Label text="Card Number:   ">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtcard" promptText="Enter your card number" />
+                        <Label fx:id="alertcard" textFill="#f50808" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="49.0" prefWidth="551.0" spacing="200.0">
+                     <children>
+                        <Button fx:id="btnback" mnemonicParsing="false" text="Back">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnconfirm" mnemonicParsing="false" text="Confirm Ticket(s)">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <ImageView fitHeight="84.0" fitWidth="1010.0" layoutX="87.0" layoutY="61.0" pickOnBounds="true">
+               <image>
+                  <Image url="images/pop.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.0" fitWidth="81.0" layoutX="161.0" layoutY="71.0" pickOnBounds="true">
+               <image>
+                  <Image url="images/popcorn-time-logo.png" />
+               </image>
+            </ImageView>
+            <Line endX="644.0" layoutX="616.0" layoutY="184.0" startX="-613.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

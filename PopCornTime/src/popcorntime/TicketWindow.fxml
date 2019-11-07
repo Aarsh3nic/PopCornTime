@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="776.0" prefWidth="1076.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="popcorntime.TicketWindowController">
+   <children>
+      <Label layoutX="406.0" layoutY="172.0" prefHeight="81.0" prefWidth="238.0" text="Ticket Details" textAlignment="CENTER" textFill="#0535d3">
+         <font>
+            <Font name="Arial Bold" size="35.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="81.0" fitWidth="755.0" layoutX="191.0" layoutY="74.0" pickOnBounds="true">
+         <image>
+            <Image url="images/pop.PNG" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="65.0" fitWidth="81.0" layoutX="212.0" layoutY="82.0" pickOnBounds="true">
+         <image>
+            <Image url="images/popcorn-time-logo.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="txtreceipt" layoutX="73.0" layoutY="253.0" prefHeight="428.0" prefWidth="904.0" promptText="Click &quot;View Receipt&quot; button to get your receipt...">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></TextArea>
+      <Button fx:id="btnreceipt" layoutX="73.0" layoutY="706.0" mnemonicParsing="false" text="View Receipt">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnclose" layoutX="917.0" layoutY="706.0" mnemonicParsing="false" text="Close">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
