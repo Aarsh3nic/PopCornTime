@@ -307,6 +307,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.DateTimeException;
+
 import javafx.scene.Node;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -2013,6 +2015,7 @@ public int onBookClicked(){
 		alert.setContentText("Error: you haven't choose your theatre,Please choose it.");
 		alert.show();}
 
+	
 	try{
 		sd.setMovies(movies.getValue());
 	}
@@ -2024,9 +2027,21 @@ public int onBookClicked(){
 		alert.show();}
 
 	try{
-		sd.setDate(date.getValue());;
+		sd.setDate(date.getValue());
 	}
 
+	catch (IllegalArgumentException e) {
+		temp = 1;
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setContentText("Error: you have chosen date before today,Please choose upcoming dates.");
+		alert.show();}
+	
+	catch (DateTimeException e) {
+		temp = 1;
+		Alert alert = new Alert(AlertType.ERROR);
+		alert.setContentText("Error: you have chosen date out of range,Please choose date within this week.");
+		alert.show();}
+	
 	catch (NullPointerException e) {
 		temp = 1;
 		Alert alert = new Alert(AlertType.ERROR);
@@ -2324,6 +2339,8 @@ int temp3 =0;
 				out.print("Theatre: "+ sd.getTheatre());
 				out.println();
 				out.print("Movie : "+ sd.getMovies());
+				out.println();
+				out.print("Date : "+ sd.getDate());
 				out.println();
 				out.print("Showtime: "+ sd.getShowtime() );
 				out.println();

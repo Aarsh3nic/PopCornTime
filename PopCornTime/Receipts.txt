@@ -1,15 +1,16 @@
 -----------------Seat Details----------------
 City : Oakville
-Theatre: Eglinton
-Movie : Spiderman: Far from Home
-Showtime: 3:00 PM
-Number of Tickets: 2
-Tickets: A5, A6
+Theatre: Yorkdale
+Movie : Kabir Singh
+Date : 2019-11-13
+Showtime: 10:30 PM
+Number of Tickets: 1
+Tickets: A5
 ------------------Payee Details--------------------
-Name : aarsh
-Age: 12
-Mobile Number : 1231231231
-Email: asdsd
+Name : hjhkl
+Age: 45
+Mobile Number : 1234567890
+Email: hhh
 Payment Method : Paid by Credit/Debit Card
-Card Number :xxxx-xxxx-xxxx-1231
+Card Number :xxxx-xxxx-xxxx-3456
 ------------------------------------------------

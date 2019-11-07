@@ -1,5 +1,6 @@
 package popcorntime;
 
+import java.time.DateTimeException;
 import java.time.LocalDate;
 
 public class SeatDetails {
@@ -30,9 +31,18 @@ public void setDate(LocalDate date) {
 
 		throw new NullPointerException("You must choose a date");
 
-	} else {
-		this.date = date;
+	} 
+	
+	if  (date.isBefore(date.now())){
+		throw new IllegalArgumentException();
 	}
+	
+	 if (date.isAfter(date.now().plusWeeks(1))) {
+		throw new DateTimeException("");
+	}
+	/*else {
+		this.date = date;
+	}*/
 	this.date = date;
 }
 public String getCity() {
